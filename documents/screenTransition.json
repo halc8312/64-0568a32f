@@ -1,0 +1,29 @@
+{
+  "key": "screenTransition",
+  "value": [
+    {
+      "id": "性格診断機能",
+      "value": "{\n    \"mermaid\": \"graph LR\\n    Start[トップ画面] --> Login[ログイン画面]\\n    Login --> Guidance[診断ガイダンス画面]\\n    Guidance --> Question[質問画面]\\n    Question --> NextQuestion[次の質問画面]\\n    NextQuestion --> Result[診断結果画面]\\n    NextQuestion -- 質問が残っている --> Question\\n    Result --> Detail[性格タイプ詳細画面]\\n    Result --> Menu[診断後メニュー画面]\\n    Detail --> Menu\\n    Menu --> Guidance\\n    Menu --> Result\"\n}"
+    },
+    {
+      "id": "個別アドバイス提供機能",
+      "value": "{\n    \"mermaid\": \"graph LR\\n    Start[トップ画面] --> TypeSelect[タイプ選択画面]\\n    TypeSelect --> AdviceTop[個別アドバイストップ]\\n    AdviceTop --> Love[恋愛アドバイス画面]\\n    AdviceTop --> Work[仕事アドバイス画面]\\n    AdviceTop --> Money[金銭管理アドバイス画面]\\n    AdviceTop --> Compatibility[相性診断画面]\\n    Love --> Detail1[恋愛アドバイス詳細]\\n    Work --> Detail2[仕事アドバイス詳細]\\n    Money --> Detail3[金銭管理アドバイス詳細]\\n    Compatibility --> Result[相性診断結果画面]\\n    Detail1 --> Save[保存画面]\\n    Detail2 --> Save\\n    Detail3 --> Save\\n    Result --> Save\\n    Save --> AdviceTop\"\n}"
+    },
+    {
+      "id": "診断結果保存機能",
+      "value": "{\n    \"mermaid\": \"graph LR\\n    Home[ホーム画面] --> DiagHistory[診断履歴一覧画面]\\n    DiagHistory --> ResultDetail[診断結果詳細画面]\\n    DiagHistory --> CompareSelect[比較対象選択画面]\\n    CompareSelect --> CompareResult[診断結果比較画面]\\n    ResultDetail --> SaveConfirm[保存確認画面]\\n    SaveConfirm --> SaveComplete[保存完了画面]\\n    SaveComplete --> DiagHistory\\n    ResultDetail --> CompareSelect\"\n}"
+    },
+    {
+      "id": "SNSシェア機能",
+      "value": "{\n    \"mermaid\": \"graph LR\\n    TOP[トップページ] --> RESULT[診断結果画面]\\n    RESULT --> SHARE[シェア設定画面]\\n    SHARE --> CUSTOMIZE[シェア内容カスタマイズ画面]\\n    CUSTOMIZE --> PREVIEW[シェアプレビュー画面]\\n    PREVIEW --> SNS[SNS投稿確認画面]\\n    SNS --> COMPLETE[シェア完了画面]\\n    COMPLETE --> RESULT\\n    PREVIEW --> CUSTOMIZE\\n    SNS --> CUSTOMIZE\"\n}"
+    },
+    {
+      "id": "ユーザー管理機能",
+      "value": "{\n    \"mermaid\": \"graph LR\\n    Top[トップページ] --> Login[ログイン画面]\\n    Top --> Register[新規登録画面]\\n    Login --> MyPage[マイページ]\\n    Register --> MyPage\\n    MyPage --> Profile[プロフィール設定画面]\\n    MyPage --> Password[パスワード変更画面]\\n    MyPage --> Privacy[プライバシー設定画面]\\n    Profile --> MyPage\\n    Password --> MyPage\\n    Privacy --> MyPage\\n    Login --> PasswordReset[パスワードリセット画面]\\n    PasswordReset --> Login\\n    Register --> RegisterConfirm[登録確認画面]\\n    RegisterConfirm --> RegisterComplete[登録完了画面]\\n    RegisterComplete --> Login\"\n}"
+    },
+    {
+      "id": "データバックアップ機能",
+      "value": "{\n    \"mermaid\": \"graph LR\\n    TOP[トップ画面] --> BACKUP[バックアップ画面]\\n    BACKUP --> BACKUP_SELECT[バックアップ対象選択画面]\\n    BACKUP_SELECT --> BACKUP_CONFIRM[バックアップ確認画面]\\n    BACKUP_CONFIRM --> BACKUP_PROGRESS[バックアップ処理中画面]\\n    BACKUP_PROGRESS --> BACKUP_COMPLETE[バックアップ完了画面]\\n    BACKUP --> RESTORE[リストア画面]\\n    RESTORE --> RESTORE_SELECT[リストア対象選択画面]\\n    RESTORE_SELECT --> RESTORE_CONFIRM[リストア確認画面]\\n    RESTORE_CONFIRM --> RESTORE_PROGRESS[リストア処理中画面]\\n    RESTORE_PROGRESS --> RESTORE_COMPLETE[リストア完了画面]\\n    BACKUP_COMPLETE --> TOP\\n    RESTORE_COMPLETE --> TOP\"\n}"
+    }
+  ]
+}

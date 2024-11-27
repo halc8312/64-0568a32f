@@ -1,0 +1,425 @@
+{
+  "key": "functionsList",
+  "value": [
+    {
+      "id": "FUN-001",
+      "category": "性格診断機能",
+      "function_name": "性格診断質問表示",
+      "description": "ユーザーに性格診断のための質問を順次表示する機能",
+      "input": "なし",
+      "output": "質問文、選択肢",
+      "user": "すべてのユーザー",
+      "estimationCategory": "function",
+      "functionName": "性格診断質問表示",
+      "target": true,
+      "manMonth": {
+        "requirementDefinition": "0.0150",
+        "design": "0.0150",
+        "implementation": "0.0600",
+        "test": "0.0300",
+        "release": "0.0150",
+        "migration": "0.0150"
+      },
+      "difficulty": "Simple"
+    },
+    {
+      "id": "FUN-002",
+      "category": "性格診断機能",
+      "function_name": "回答入力",
+      "description": "ユーザーが質問に対する回答を選択・入力する機能",
+      "input": "ユーザーの選択した回答",
+      "output": "回答データ",
+      "user": "すべてのユーザー",
+      "estimationCategory": "function",
+      "functionName": "回答入力",
+      "target": true,
+      "manMonth": {
+        "requirementDefinition": "0.0150",
+        "design": "0.0150",
+        "implementation": "0.0600",
+        "test": "0.0300",
+        "release": "0.0150",
+        "migration": "0.0150"
+      },
+      "difficulty": "Simple"
+    },
+    {
+      "id": "FUN-003",
+      "category": "性格診断機能",
+      "function_name": "性格タイプ判定",
+      "description": "回答データを分析し、64種類の性格タイプから最適なタイプを判定する機能",
+      "input": "回答データ",
+      "output": "性格タイプ判定結果",
+      "user": "すべてのユーザー",
+      "estimationCategory": "function",
+      "functionName": "性格タイプ判定",
+      "target": true,
+      "manMonth": {
+        "requirementDefinition": "0.0300",
+        "design": "0.0300",
+        "implementation": "0.1200",
+        "test": "0.0600",
+        "release": "0.0300",
+        "migration": "0.0300"
+      },
+      "difficulty": "Complex"
+    },
+    {
+      "id": "FUN-004",
+      "category": "性格診断機能",
+      "function_name": "診断結果表示",
+      "description": "判定された性格タイプの特徴や詳細情報を表示する機能",
+      "input": "性格タイプ判定結果",
+      "output": "性格タイプの説明、特徴、長所・短所など",
+      "user": "すべてのユーザー",
+      "estimationCategory": "function",
+      "functionName": "診断結果表示",
+      "target": true,
+      "manMonth": {
+        "requirementDefinition": "0.0200",
+        "design": "0.0200",
+        "implementation": "0.0800",
+        "test": "0.0400",
+        "release": "0.0200",
+        "migration": "0.0200"
+      },
+      "difficulty": "Moderate"
+    },
+    {
+      "id": "FUN-005",
+      "category": "個別アドバイス提供機能",
+      "function_name": "恋愛アドバイス生成",
+      "description": "性格タイプに基づいた恋愛に関するアドバイスを生成する機能",
+      "input": "性格タイプ判定結果",
+      "output": "恋愛に関する個別化されたアドバイス",
+      "user": "診断結果を保存したユーザー",
+      "estimationCategory": "function",
+      "functionName": "恋愛アドバイス生成",
+      "target": true,
+      "manMonth": {
+        "requirementDefinition": "0.0300",
+        "design": "0.0300",
+        "implementation": "0.1200",
+        "test": "0.0600",
+        "release": "0.0300",
+        "migration": "0.0300"
+      },
+      "difficulty": "Complex"
+    },
+    {
+      "id": "FUN-006",
+      "category": "個別アドバイス提供機能",
+      "function_name": "仕事アドバイス生成",
+      "description": "性格タイプに基づいたキャリアや仕事に関するアドバイスを生成する機能",
+      "input": "性格タイプ判定結果",
+      "output": "仕事に関する個別化されたアドバイス",
+      "user": "診断結果を保存したユーザー",
+      "estimationCategory": "function",
+      "functionName": "仕事アドバイス生成",
+      "target": true,
+      "manMonth": {
+        "requirementDefinition": "0.0300",
+        "design": "0.0300",
+        "implementation": "0.1200",
+        "test": "0.0600",
+        "release": "0.0300",
+        "migration": "0.0300"
+      },
+      "difficulty": "Complex"
+    },
+    {
+      "id": "FUN-007",
+      "category": "個別アドバイス提供機能",
+      "function_name": "金銭管理アドバイス生成",
+      "description": "性格タイプに基づいた金銭管理に関するアドバイスを生成する機能",
+      "input": "性格タイプ判定結果",
+      "output": "金銭管理に関する個別化されたアドバイス",
+      "user": "診断結果を保存したユーザー",
+      "estimationCategory": "function",
+      "functionName": "金銭管理アドバイス生成",
+      "target": true,
+      "manMonth": {
+        "requirementDefinition": "0.0200",
+        "design": "0.0200",
+        "implementation": "0.0800",
+        "test": "0.0400",
+        "release": "0.0200",
+        "migration": "0.0200"
+      },
+      "difficulty": "Moderate"
+    },
+    {
+      "id": "FUN-008",
+      "category": "診断結果保存機能",
+      "function_name": "診断結果保存",
+      "description": "診断結果をユーザーアカウントに紐付けて保存する機能",
+      "input": "性格タイプ判定結果",
+      "output": "保存完了通知",
+      "user": "ログインユーザー",
+      "estimationCategory": "function",
+      "functionName": "診断結果保存",
+      "target": true,
+      "manMonth": {
+        "requirementDefinition": "0.0200",
+        "design": "0.0200",
+        "implementation": "0.0800",
+        "test": "0.0400",
+        "release": "0.0200",
+        "migration": "0.0200"
+      },
+      "difficulty": "Moderate"
+    },
+    {
+      "id": "FUN-009",
+      "category": "診断結果保存機能",
+      "function_name": "診断履歴表示",
+      "description": "過去の診断結果の履歴を一覧表示する機能",
+      "input": "ユーザーID",
+      "output": "診断結果履歴一覧",
+      "user": "ログインユーザー",
+      "estimationCategory": "function",
+      "functionName": "診断履歴表示",
+      "target": true,
+      "manMonth": {
+        "requirementDefinition": "0.0150",
+        "design": "0.0150",
+        "implementation": "0.0600",
+        "test": "0.0300",
+        "release": "0.0150",
+        "migration": "0.0150"
+      },
+      "difficulty": "Simple"
+    },
+    {
+      "id": "FUN-010",
+      "category": "診断結果保存機能",
+      "function_name": "診断結果比較",
+      "description": "複数の診断結果を比較表示する機能",
+      "input": "選択された診断結果ID",
+      "output": "診断結果の比較データ",
+      "user": "ログインユーザー",
+      "estimationCategory": "function",
+      "functionName": "診断結果比較",
+      "target": true,
+      "manMonth": {
+        "requirementDefinition": "0.0200",
+        "design": "0.0200",
+        "implementation": "0.0800",
+        "test": "0.0400",
+        "release": "0.0200",
+        "migration": "0.0200"
+      },
+      "difficulty": "Moderate"
+    },
+    {
+      "id": "FUN-011",
+      "category": "SNSシェア機能",
+      "function_name": "診断結果シェア",
+      "description": "診断結果を各種SNSプラットフォームでシェアする機能",
+      "input": "シェアする診断結果、選択したSNSプラットフォーム",
+      "output": "シェア用URL・投稿データ",
+      "user": "すべてのユーザー",
+      "estimationCategory": "function",
+      "functionName": "診断結果シェア",
+      "target": true,
+      "manMonth": {
+        "requirementDefinition": "0.0150",
+        "design": "0.0150",
+        "implementation": "0.0600",
+        "test": "0.0300",
+        "release": "0.0150",
+        "migration": "0.0150"
+      },
+      "difficulty": "Simple"
+    },
+    {
+      "id": "FUN-012",
+      "category": "SNSシェア機能",
+      "function_name": "シェア内容カスタマイズ",
+      "description": "シェアする診断結果の内容をカスタマイズする機能",
+      "input": "シェア内容の選択項目",
+      "output": "カスタマイズされたシェアコンテンツ",
+      "user": "すべてのユーザー",
+      "estimationCategory": "function",
+      "functionName": "シェア内容カスタマイズ",
+      "target": true,
+      "manMonth": {
+        "requirementDefinition": "0.0150",
+        "design": "0.0150",
+        "implementation": "0.0600",
+        "test": "0.0300",
+        "release": "0.0150",
+        "migration": "0.0150"
+      },
+      "difficulty": "Simple"
+    },
+    {
+      "id": "FUN-013",
+      "category": "ユーザー管理機能",
+      "function_name": "ユーザー登録",
+      "description": "新規ユーザーを登録する機能",
+      "input": "メールアドレス、パスワード、基本情報",
+      "output": "登録完了通知、ユーザーアカウント情報",
+      "user": "未登録ユーザー",
+      "estimationCategory": "function",
+      "functionName": "ユーザー登録",
+      "target": true,
+      "manMonth": {
+        "requirementDefinition": "0.0150",
+        "design": "0.0150",
+        "implementation": "0.0600",
+        "test": "0.0300",
+        "release": "0.0150",
+        "migration": "0.0150"
+      },
+      "difficulty": "Simple"
+    },
+    {
+      "id": "FUN-014",
+      "category": "ユーザー管理機能",
+      "function_name": "ログイン認証",
+      "description": "登録ユーザーの認証を行う機能",
+      "input": "メールアドレス、パスワード",
+      "output": "認証結果、ユーザーセッション",
+      "user": "登録済みユーザー",
+      "estimationCategory": "function",
+      "functionName": "ログイン認証",
+      "target": true,
+      "manMonth": {
+        "requirementDefinition": "0.0150",
+        "design": "0.0150",
+        "implementation": "0.0600",
+        "test": "0.0300",
+        "release": "0.0150",
+        "migration": "0.0150"
+      },
+      "difficulty": "Simple"
+    },
+    {
+      "id": "FUN-015",
+      "category": "ユーザー管理機能",
+      "function_name": "プロフィール管理",
+      "description": "ユーザープロフィール情報の管理機能",
+      "input": "プロフィール更新データ",
+      "output": "更新完了通知、更新後のプロフィール情報",
+      "user": "ログインユーザー",
+      "estimationCategory": "function",
+      "functionName": "プロフィール管理",
+      "target": true,
+      "manMonth": {
+        "requirementDefinition": "0.0200",
+        "design": "0.0200",
+        "implementation": "0.0800",
+        "test": "0.0400",
+        "release": "0.0200",
+        "migration": "0.0200"
+      },
+      "difficulty": "Moderate"
+    },
+    {
+      "id": "FUN-016",
+      "category": "ユーザー管理機能",
+      "function_name": "パスワード変更",
+      "description": "ユーザーのパスワードを変更する機能",
+      "input": "現在のパスワード、新パスワード",
+      "output": "変更完了通知",
+      "user": "ログインユーザー",
+      "estimationCategory": "function",
+      "functionName": "パスワード変更",
+      "target": true,
+      "manMonth": {
+        "requirementDefinition": "0.0150",
+        "design": "0.0150",
+        "implementation": "0.0600",
+        "test": "0.0300",
+        "release": "0.0150",
+        "migration": "0.0150"
+      },
+      "difficulty": "Simple"
+    },
+    {
+      "id": "FUN-017",
+      "category": "ユーザー管理機能",
+      "function_name": "プライバシー設定",
+      "description": "診断結果の公開範囲などを設定する機能",
+      "input": "プライバシー設定項目",
+      "output": "設定完了通知、更新後の設定情報",
+      "user": "ログインユーザー",
+      "estimationCategory": "function",
+      "functionName": "プライバシー設定",
+      "target": true,
+      "manMonth": {
+        "requirementDefinition": "0.0150",
+        "design": "0.0150",
+        "implementation": "0.0600",
+        "test": "0.0300",
+        "release": "0.0150",
+        "migration": "0.0150"
+      },
+      "difficulty": "Simple"
+    },
+    {
+      "id": "FUN-018",
+      "category": "データバックアップ機能",
+      "function_name": "データバックアップ",
+      "description": "診断結果やプロフィール情報をバックアップする機能",
+      "input": "バックアップ対象データ",
+      "output": "バックアップ完了通知",
+      "user": "ログインユーザー",
+      "estimationCategory": "function",
+      "functionName": "データバックアップ",
+      "target": true,
+      "manMonth": {
+        "requirementDefinition": "0.0200",
+        "design": "0.0200",
+        "implementation": "0.0800",
+        "test": "0.0400",
+        "release": "0.0200",
+        "migration": "0.0200"
+      },
+      "difficulty": "Moderate"
+    },
+    {
+      "id": "FUN-019",
+      "category": "データバックアップ機能",
+      "function_name": "データリストア",
+      "description": "バックアップしたデータを復元する機能",
+      "input": "リストア対象のバックアップデータ",
+      "output": "リストア完了通知",
+      "user": "ログインユーザー",
+      "estimationCategory": "function",
+      "functionName": "データリストア",
+      "target": true,
+      "manMonth": {
+        "requirementDefinition": "0.0200",
+        "design": "0.0200",
+        "implementation": "0.0800",
+        "test": "0.0400",
+        "release": "0.0200",
+        "migration": "0.0200"
+      },
+      "difficulty": "Moderate"
+    },
+    {
+      "id": "FUN-020",
+      "category": "個別アドバイス提供機能",
+      "function_name": "相性診断",
+      "description": "他のユーザーや性格タイプとの相性を診断する機能",
+      "input": "比較対象の性格タイプ",
+      "output": "相性診断結果、適合度",
+      "user": "診断結果を保存したユーザー",
+      "estimationCategory": "function",
+      "functionName": "相性診断",
+      "target": true,
+      "manMonth": {
+        "requirementDefinition": "0.0200",
+        "design": "0.0200",
+        "implementation": "0.0800",
+        "test": "0.0400",
+        "release": "0.0200",
+        "migration": "0.0200"
+      },
+      "difficulty": "Moderate"
+    }
+  ]
+}

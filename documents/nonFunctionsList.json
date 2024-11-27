@@ -1,0 +1,95 @@
+{
+  "key": "nonFunctionsList",
+  "value": [
+    {
+      "id": "NON-001",
+      "category": "性能",
+      "non_function_name": "応答時間",
+      "description": "性格診断の結果表示までの応答時間は3秒以内とする"
+    },
+    {
+      "id": "NON-002",
+      "category": "性能",
+      "non_function_name": "同時接続数",
+      "description": "1000人以上の同時接続に対応する"
+    },
+    {
+      "id": "NON-003",
+      "category": "セキュリティ",
+      "non_function_name": "個人情報保護",
+      "description": "ユーザーの個人情報は暗号化して保存し、適切なアクセス制御を行う"
+    },
+    {
+      "id": "NON-004",
+      "category": "セキュリティ",
+      "non_function_name": "認証・認可",
+      "description": "ユーザー認証はOAuth2.0を使用し、適切な認可制御を実装する"
+    },
+    {
+      "id": "NON-005",
+      "category": "可用性",
+      "non_function_name": "稼働率",
+      "description": "システムの稼働率は99.9%以上を維持する"
+    },
+    {
+      "id": "NON-006",
+      "category": "可用性",
+      "non_function_name": "バックアップ",
+      "description": "データは1日1回バックアップを取得し、3世代分保持する"
+    },
+    {
+      "id": "NON-007",
+      "category": "保守性",
+      "non_function_name": "モジュール化",
+      "description": "機能ごとにモジュール化し、保守性の高いコード設計を行う"
+    },
+    {
+      "id": "NON-008",
+      "category": "保守性",
+      "non_function_name": "ドキュメント",
+      "description": "システムの設計書、運用手順書、APIドキュメントを整備する"
+    },
+    {
+      "id": "NON-009",
+      "category": "拡張性",
+      "non_function_name": "スケーラビリティ",
+      "description": "ユーザー数の増加に応じて水平スケーリングが可能な設計とする"
+    },
+    {
+      "id": "NON-010",
+      "category": "拡張性",
+      "non_function_name": "API設計",
+      "description": "RESTful APIを採用し、将来の機能追加や外部連携に対応可能な設計とする"
+    },
+    {
+      "id": "NON-011",
+      "category": "ユーザビリティ",
+      "non_function_name": "レスポンシブデザイン",
+      "description": "様々な画面サイズに対応したレスポンシブデザインを実装する"
+    },
+    {
+      "id": "NON-012",
+      "category": "ユーザビリティ",
+      "non_function_name": "ユーザーインターフェース",
+      "description": "直感的で使いやすいUIを提供し、操作説明は最小限に抑える"
+    },
+    {
+      "id": "NON-013",
+      "category": "信頼性",
+      "non_function_name": "診断精度",
+      "description": "性格診断の結果は90%以上の精度を確保する"
+    },
+    {
+      "id": "NON-014",
+      "category": "信頼性",
+      "non_function_name": "エラー処理",
+      "description": "システムエラーが発生した場合は適切なエラーメッセージを表示し、ログを記録する"
+    },
+    {
+      "id": "NON-015",
+      "category": "互換性",
+      "non_function_name": "ブラウザ対応",
+      "description": "主要なWebブラウザ（Chrome、Safari、Firefox、Edge）の最新版に対応する"
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "key": "commonComponent",
+  "value": [
+    {
+      "id": "COM-001",
+      "category": "レイアウト",
+      "fileName": "Header.tsx",
+      "description": "全画面共通のヘッダーコンポーネント。ナビゲーションメニュー、ユーザー情報、ログインステータスを表示",
+      "props": "{isLoggedIn:boolean, userName:string}",
+      "screensIds": [
+        "SCR-001",
+        "SCR-002",
+        "SCR-003",
+        "SCR-004",
+        "SCR-005",
+        "SCR-006",
+        "SCR-007",
+        "SCR-008",
+        "SCR-009",
+        "SCR-010",
+        "SCR-011",
+        "SCR-012",
+        "SCR-013",
+        "SCR-014",
+        "SCR-015",
+        "SCR-016",
+        "SCR-017",
+        "SCR-018",
+        "SCR-019",
+        "SCR-020"
+      ]
+    },
+    {
+      "id": "COM-002",
+      "category": "レイアウト",
+      "fileName": "Footer.tsx",
+      "description": "全画面共通のフッターコンポーネント。著作権情報、各種リンク、SNSアイコンを表示",
+      "props": "{}",
+      "screensIds": [
+        "SCR-001",
+        "SCR-002",
+        "SCR-003",
+        "SCR-004",
+        "SCR-005",
+        "SCR-006",
+        "SCR-007",
+        "SCR-008",
+        "SCR-009",
+        "SCR-010",
+        "SCR-011",
+        "SCR-012",
+        "SCR-013",
+        "SCR-014",
+        "SCR-015",
+        "SCR-016",
+        "SCR-017",
+        "SCR-018",
+        "SCR-019",
+        "SCR-020"
+      ]
+    },
+    {
+      "id": "COM-003",
+      "category": "レイアウト",
+      "fileName": "MainVisual.tsx",
+      "description": "トップページのメインビジュアルを表示するコンポーネント",
+      "props": "{imageSrc:string, title:string, description:string}",
+      "screensIds": [
+        "SCR-001"
+      ]
+    },
+    {
+      "id": "COM-004",
+      "category": "ナビゲーション",
+      "fileName": "MenuList.tsx",
+      "description": "サイト全体のナビゲーションメニューを表示するコンポーネント",
+      "props": "{menuItems:array}",
+      "screensIds": [
+        "SCR-001"
+      ]
+    },
+    {
+      "id": "COM-005",
+      "category": "認証",
+      "fileName": "AuthForm.tsx",
+      "description": "ログインと新規登録で使用する認証フォームコンポーネント",
+      "props": "{formType:string, onSubmit:function}",
+      "screensIds": [
+        "SCR-002",
+        "SCR-012",
+        "SCR-020"
+      ]
+    },
+    {
+      "id": "COM-006",
+      "category": "レイアウト",
+      "fileName": "DiagnosisLayout.tsx",
+      "description": "性格診断関連ページで使用する共通レイアウトコンポーネント",
+      "props": "{children:node}",
+      "screensIds": [
+        "SCR-003",
+        "SCR-004"
+      ]
+    },
+    {
+      "id": "COM-007",
+      "category": "UI",
+      "fileName": "ProgressBar.tsx",
+      "description": "診断の進行状況を表示するプログレスバーコンポーネント",
+      "props": "{current:number, total:number}",
+      "screensIds": [
+        "SCR-004"
+      ]
+    },
+    {
+      "id": "COM-008",
+      "category": "データ表示",
+      "fileName": "ResultChart.tsx",
+      "description": "診断結果をグラフ表示するコンポーネント",
+      "props": "{resultData:object}",
+      "screensIds": [
+        "SCR-005"
+      ]
+    },
+    {
+      "id": "COM-009",
+      "category": "ソーシャル",
+      "fileName": "ShareButtons.tsx",
+      "description": "SNSシェアボタンを表示するコンポーネント",
+      "props": "{shareUrl:string, title:string}",
+      "screensIds": [
+        "SCR-005"
+      ]
+    },
+    {
+      "id": "COM-010",
+      "category": "レイアウト",
+      "fileName": "AdviceLayout.tsx",
+      "description": "アドバイス関連ページで使用する共通レイアウトコンポーネント",
+      "props": "{children:node}",
+      "screensIds": [
+        "SCR-006",
+        "SCR-007",
+        "SCR-013",
+        "SCR-014",
+        "SCR-019"
+      ]
+    },
+    {
+      "id": "COM-011",
+      "category": "データ表示",
+      "fileName": "HistoryList.tsx",
+      "description": "診断履歴を一覧表示するコンポーネント",
+      "props": "{historyData:array}",
+      "screensIds": [
+        "SCR-008"
+      ]
+    },
+    {
+      "id": "COM-012",
+      "category": "プレビュー",
+      "fileName": "SharePreview.tsx",
+      "description": "シェア内容のプレビューを表示するコンポーネント",
+      "props": "{previewData:object}",
+      "screensIds": [
+        "SCR-009"
+      ]
+    },
+    {
+      "id": "COM-013",
+      "category": "レイアウト",
+      "fileName": "SettingsLayout.tsx",
+      "description": "設定関連ページで使用する共通レイアウトコンポーネント",
+      "props": "{children:node}",
+      "screensIds": [
+        "SCR-010",
+        "SCR-011",
+        "SCR-016",
+        "SCR-017",
+        "SCR-018"
+      ]
+    },
+    {
+      "id": "COM-014",
+      "category": "データ表示",
+      "fileName": "CompareChart.tsx",
+      "description": "複数の診断結果を比較表示するグラフコンポーネント",
+      "props": "{compareData:array}",
+      "screensIds": [
+        "SCR-015"
+      ]
+    }
+  ]
+}

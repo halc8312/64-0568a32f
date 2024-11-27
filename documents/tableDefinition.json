@@ -1,0 +1,225 @@
+{
+  "key": "tableDefinition",
+  "value": [
+    {
+      "id": "TAB-001",
+      "table": "users",
+      "column": "id",
+      "dataType": "uuid",
+      "regulation": "PRIMARY KEY",
+      "defaultValue": "gen_random_uuid()",
+      "foreignKey": "",
+      "description": "ユーザーの一意識別子"
+    },
+    {
+      "id": "TAB-002",
+      "table": "users",
+      "column": "email",
+      "dataType": "text",
+      "regulation": "UNIQUE NOT NULL",
+      "defaultValue": "",
+      "foreignKey": "",
+      "description": "ユーザーのメールアドレス"
+    },
+    {
+      "id": "TAB-003",
+      "table": "users",
+      "column": "profile",
+      "dataType": "jsonb",
+      "regulation": "NOT NULL",
+      "defaultValue": "{\"nickname\": \"\", \"birth_date\": null, \"gender\": null, \"occupation\": \"\"}",
+      "foreignKey": "",
+      "description": "ユーザーのプロフィール情報"
+    },
+    {
+      "id": "TAB-004",
+      "table": "users",
+      "column": "created_at",
+      "dataType": "timestamp with time zone",
+      "regulation": "NOT NULL",
+      "defaultValue": "now()",
+      "foreignKey": "",
+      "description": "アカウント作成日時"
+    },
+    {
+      "id": "TAB-005",
+      "table": "personality_diagnoses",
+      "column": "id",
+      "dataType": "uuid",
+      "regulation": "PRIMARY KEY",
+      "defaultValue": "gen_random_uuid()",
+      "foreignKey": "",
+      "description": "診断結果の一意識別子"
+    },
+    {
+      "id": "TAB-006",
+      "table": "personality_diagnoses",
+      "column": "user_id",
+      "dataType": "uuid",
+      "regulation": "NOT NULL",
+      "defaultValue": "",
+      "foreignKey": "users.id",
+      "description": "診断を受けたユーザーのID"
+    },
+    {
+      "id": "TAB-007",
+      "table": "personality_diagnoses",
+      "column": "answers",
+      "dataType": "jsonb",
+      "regulation": "NOT NULL",
+      "defaultValue": "[{\"question_id\": 1, \"answer_value\": null}]",
+      "foreignKey": "",
+      "description": "診断質問への回答データ"
+    },
+    {
+      "id": "TAB-008",
+      "table": "personality_diagnoses",
+      "column": "personality_type",
+      "dataType": "jsonb",
+      "regulation": "NOT NULL",
+      "defaultValue": "{\"type_id\": null, \"type_name\": \"\", \"characteristics\": [], \"strengths\": [], \"weaknesses\": []}",
+      "foreignKey": "",
+      "description": "判定された性格タイプ情報"
+    },
+    {
+      "id": "TAB-009",
+      "table": "personality_diagnoses",
+      "column": "diagnosed_at",
+      "dataType": "timestamp with time zone",
+      "regulation": "NOT NULL",
+      "defaultValue": "now()",
+      "foreignKey": "",
+      "description": "診断実施日時"
+    },
+    {
+      "id": "TAB-010",
+      "table": "advice_records",
+      "column": "id",
+      "dataType": "uuid",
+      "regulation": "PRIMARY KEY",
+      "defaultValue": "gen_random_uuid()",
+      "foreignKey": "",
+      "description": "アドバイスレコードの一意識別子"
+    },
+    {
+      "id": "TAB-011",
+      "table": "advice_records",
+      "column": "diagnosis_id",
+      "dataType": "uuid",
+      "regulation": "NOT NULL",
+      "defaultValue": "",
+      "foreignKey": "personality_diagnoses.id",
+      "description": "関連する診断結果のID"
+    },
+    {
+      "id": "TAB-012",
+      "table": "advice_records",
+      "column": "category",
+      "dataType": "text",
+      "regulation": "NOT NULL",
+      "defaultValue": "",
+      "foreignKey": "",
+      "description": "アドバイスカテゴリ（恋愛、仕事、金銭管理など）"
+    },
+    {
+      "id": "TAB-013",
+      "table": "advice_records",
+      "column": "advice_content",
+      "dataType": "jsonb",
+      "regulation": "NOT NULL",
+      "defaultValue": "{\"title\": \"\", \"description\": \"\", \"action_items\": [], \"recommendations\": []}",
+      "foreignKey": "",
+      "description": "生成されたアドバイス内容"
+    },
+    {
+      "id": "TAB-014",
+      "table": "advice_records",
+      "column": "created_at",
+      "dataType": "timestamp with time zone",
+      "regulation": "NOT NULL",
+      "defaultValue": "now()",
+      "foreignKey": "",
+      "description": "アドバイス生成日時"
+    },
+    {
+      "id": "TAB-015",
+      "table": "shared_contents",
+      "column": "id",
+      "dataType": "uuid",
+      "regulation": "PRIMARY KEY",
+      "defaultValue": "gen_random_uuid()",
+      "foreignKey": "",
+      "description": "シェアコンテンツの一意識別子"
+    },
+    {
+      "id": "TAB-016",
+      "table": "shared_contents",
+      "column": "diagnosis_id",
+      "dataType": "uuid",
+      "regulation": "NOT NULL",
+      "defaultValue": "",
+      "foreignKey": "personality_diagnoses.id",
+      "description": "シェアする診断結果のID"
+    },
+    {
+      "id": "TAB-017",
+      "table": "shared_contents",
+      "column": "share_settings",
+      "dataType": "jsonb",
+      "regulation": "NOT NULL",
+      "defaultValue": "{\"visibility\": \"public\", \"platforms\": [], \"custom_message\": \"\", \"included_sections\": []}",
+      "foreignKey": "",
+      "description": "シェア設定情報"
+    },
+    {
+      "id": "TAB-018",
+      "table": "shared_contents",
+      "column": "share_url",
+      "dataType": "text",
+      "regulation": "NOT NULL",
+      "defaultValue": "",
+      "foreignKey": "",
+      "description": "シェア用URL"
+    },
+    {
+      "id": "TAB-019",
+      "table": "shared_contents",
+      "column": "created_at",
+      "dataType": "timestamp with time zone",
+      "regulation": "NOT NULL",
+      "defaultValue": "now()",
+      "foreignKey": "",
+      "description": "シェアコンテンツ作成日時"
+    },
+    {
+      "id": "TAB-020",
+      "table": "user_settings",
+      "column": "user_id",
+      "dataType": "uuid",
+      "regulation": "PRIMARY KEY",
+      "defaultValue": "",
+      "foreignKey": "users.id",
+      "description": "設定を所有するユーザーのID"
+    },
+    {
+      "id": "TAB-021",
+      "table": "user_settings",
+      "column": "privacy_settings",
+      "dataType": "jsonb",
+      "regulation": "NOT NULL",
+      "defaultValue": "{\"profile_visibility\": \"private\", \"result_sharing\": \"private\", \"notification_preferences\": {\"email\": true, \"push\": false}}",
+      "foreignKey": "",
+      "description": "プライバシー設定情報"
+    },
+    {
+      "id": "TAB-022",
+      "table": "user_settings",
+      "column": "updated_at",
+      "dataType": "timestamp with time zone",
+      "regulation": "NOT NULL",
+      "defaultValue": "now()",
+      "foreignKey": "",
+      "description": "設定更新日時"
+    }
+  ]
+}

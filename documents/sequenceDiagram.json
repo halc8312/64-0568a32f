@@ -1,0 +1,29 @@
+{
+  "key": "sequenceDiagram",
+  "value": [
+    {
+      "id": "性格診断機能",
+      "value": "{\n    \"mermaid\": \"sequenceDiagram\\n    autonumber\\n    User->>Frontend: 診断開始をクリック\\n    Frontend->>Backend: 診断質問データリクエスト\\n    Backend->>DB: 質問データ取得\\n    DB->>Backend: 質問データ返却\\n    Backend->>Frontend: 質問データ送信\\n    Frontend->>User: 質問を表示\\n    loop 全質問\\n        User->>Frontend: 質問への回答を選択\\n        Frontend->>Backend: 回答データを送信\\n        Backend->>DB: 回答データを保存\\n        DB->>Backend: 保存完了通知\\n        Backend->>Frontend: 次の質問を送信\\n        Frontend->>User: 次の質問を表示\\n    end\\n    Frontend->>Backend: 全回答データで診断実行リクエスト\\n    Backend->>DB: 回答データ取得\\n    DB->>Backend: 回答データ返却\\n    Backend->>Backend: 性格タイプ判定処理\\n    Backend->>DB: 診断結果を保存\\n    DB->>Backend: 保存完了通知\\n    Backend->>Frontend: 診断結果を送信\\n    Frontend->>User: 診断結果を表示\"\n}"
+    },
+    {
+      "id": "個別アドバイス提供機能",
+      "value": "{\n    \"mermaid\": \"sequenceDiagram\\n    User->>Frontend: アドバイスページにアクセス\\n    Frontend->>Backend: アドバイス要求\\n    Backend->>DB: 性格診断結果取得\\n    DB-->>Backend: 診断結果返却\\n    Backend->>Backend: アドバイス生成アルゴリズム実行\\n    Backend->>DB: アドバイスデータ保存\\n    DB-->>Backend: 保存完了\\n    Backend-->>Frontend: アドバイスデータ返却\\n    Frontend-->>User: アドバイス表示\\n    User->>Frontend: カテゴリー選択(恋愛/仕事/金銭管理)\\n    Frontend->>Backend: カテゴリー別アドバイス要求\\n    Backend->>DB: カテゴリー別アドバイス取得\\n    DB-->>Backend: アドバイスデータ返却\\n    Backend-->>Frontend: カテゴリー別アドバイス返却\\n    Frontend-->>User: カテゴリー別アドバイス表示\\n    User->>Frontend: 相性診断リクエスト\\n    Frontend->>Backend: 相性診断実行要求\\n    Backend->>DB: 比較対象データ取得\\n    DB-->>Backend: データ返却\\n    Backend->>Backend: 相性診断アルゴリズム実行\\n    Backend-->>Frontend: 相性診断結果返却\\n    Frontend-->>User: 相性診断結果表示\"\n}"
+    },
+    {
+      "id": "診断結果保存機能",
+      "value": "{\n    \"mermaid\": \"sequenceDiagram\\n    User->>Frontend: 診断結果保存を要求\\n    Frontend->>Backend: 診断結果データを送信\\n    Backend->>DB: personality_diagnosesテーブルに保存\\n    DB->>Backend: 保存完了\\n    Backend->>Frontend: 保存完了通知\\n    Frontend->>User: 完了メッセージを表示\\n    User->>Frontend: 診断履歴表示を要求\\n    Frontend->>Backend: 診断履歴データを要求\\n    Backend->>DB: personality_diagnosesテーブルから取得\\n    DB->>Backend: 診断履歴データ\\n    Backend->>Frontend: 診断履歴データを送信\\n    Frontend->>User: 診断履歴一覧を表示\\n    User->>Frontend: 診断結果比較を要求\\n    Frontend->>Backend: 選択された診断結果IDを送信\\n    Backend->>DB: 対象の診断結果を取得\\n    DB->>Backend: 診断結果データ\\n    Backend->>Frontend: 比較分析データを送信\\n    Frontend->>User: 比較結果を表示\"\n}"
+    },
+    {
+      "id": "SNSシェア機能",
+      "value": "{\n    \"mermaid\": \"sequenceDiagram\\n    actor User\\n    participant Frontend\\n    participant Backend\\n    participant DB\\n    \\n    User->>Frontend: シェア画面を開く\\n    Frontend->>Backend: 診断結果データ要求\\n    Backend->>DB: 診断結果データ取得\\n    DB-->>Backend: 診断結果データ返却\\n    Backend-->>Frontend: 診断結果データ返却\\n    Frontend-->>User: シェア設定画面表示\\n    \\n    User->>Frontend: シェア内容をカスタマイズ\\n    Frontend->>Backend: シェアコンテンツ生成要求\\n    Backend->>Backend: シェアコンテンツ生成処理\\n    Backend->>DB: シェア設定保存\\n    DB-->>Backend: 保存完了通知\\n    Backend-->>Frontend: シェアURL・コンテンツ返却\\n    Frontend-->>User: シェアボタン表示\\n    \\n    User->>Frontend: SNSプラットフォーム選択\\n    Frontend->>Frontend: シェアURLを生成\\n    Frontend-->>User: 選択したSNSでシェア画面表示\"\n}"
+    },
+    {
+      "id": "ユーザー管理機能",
+      "value": "{\n    \"mermaid\": \"sequenceDiagram\\n    User->>Frontend: アカウント登録/ログインボタンクリック\\n    Frontend->>Backend: 認証リクエスト送信\\n    Backend->>DB: ユーザー情報検証\\n    DB-->>Backend: 検証結果返却\\n    Backend-->>Frontend: JWTトークン発行\\n    Frontend-->>User: ログイン完了表示\\n    User->>Frontend: プロフィール情報入力\\n    Frontend->>Backend: プロフィール更新リクエスト\\n    Backend->>DB: プロフィール情報保存\\n    DB-->>Backend: 保存完了通知\\n    Backend-->>Frontend: 更新完了レスポンス\\n    Frontend-->>User: 更新完了表示\\n    User->>Frontend: パスワード変更入力\\n    Frontend->>Backend: パスワード変更リクエスト\\n    Backend->>DB: パスワードハッシュ更新\\n    DB-->>Backend: 更新完了通知\\n    Backend-->>Frontend: 変更完了レスポンス\\n    Frontend-->>User: パスワード変更完了表示\"\n}"
+    },
+    {
+      "id": "データバックアップ機能",
+      "value": "{\n    \"mermaid\": \"sequenceDiagram\\n    actor User\\n    participant Frontend\\n    participant Backend\\n    participant DB\\n\\n    User->>Frontend: バックアップ開始要求\\n    Frontend->>Backend: バックアップリクエスト送信\\n    Backend->>DB: ユーザーデータ取得\\n    DB-->>Backend: データ返却\\n    Backend->>Backend: データの整形と暗号化\\n    Backend-->>Frontend: バックアップファイル生成\\n    Frontend-->>User: ダウンロード開始\\n\\n    User->>Frontend: リストア開始要求\\n    Frontend->>Backend: リストアリクエスト送信\\n    Backend->>Backend: データの検証と復号化\\n    Backend->>DB: データの整合性チェック\\n    DB-->>Backend: チェック結果\\n    Backend->>DB: データ保存\\n    DB-->>Backend: 保存完了\\n    Backend-->>Frontend: リストア完了通知\\n    Frontend-->>User: 完了メッセージ表示\"\n}"
+    }
+  ]
+}

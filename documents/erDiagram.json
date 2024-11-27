@@ -1,0 +1,6 @@
+{
+  "key": "erDiagram",
+  "value": {
+    "mermaid": "erDiagram\n    users {\n        uuid id PK\n        text email\n        jsonb profile\n        timestamp created_at\n    }\n    personality_diagnoses {\n        uuid id PK\n        uuid user_id FK\n        jsonb answers\n        jsonb personality_type\n        timestamp diagnosed_at\n    }\n    advice_records {\n        uuid id PK\n        uuid diagnosis_id FK\n        text category\n        jsonb advice_content\n        timestamp created_at\n    }\n    shared_contents {\n        uuid id PK\n        uuid diagnosis_id FK\n        jsonb share_settings\n        text share_url\n        timestamp created_at\n    }\n    user_settings {\n        uuid user_id PK\n        jsonb privacy_settings\n        timestamp updated_at\n    }\n    users ||--o{ personality_diagnoses : \"has diagnoses\"\n    personality_diagnoses ||--o{ advice_records : \"generates advice\"\n    personality_diagnoses ||--o{ shared_contents : \"can be shared\"\n    users ||--|| user_settings : \"has settings\""
+  }
+}

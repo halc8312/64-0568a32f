@@ -1,0 +1,6 @@
+{
+  "key": "systemArchitecture",
+  "value": {
+    "mermaid": "graph TD\n    subgraph Frontend\n        UI1[一般ユーザー画面]\n        UI2[管理者画面]\n    end\n\n    subgraph Backend\n        API1[性格診断API]\n        API2[アドバイス生成API]\n        API3[認証API]\n        API4[ユーザー管理API]\n        API5[データ分析API]\n    end\n\n    subgraph Database\n        DB1[ユーザーDB]\n        DB2[診断結果DB]\n        DB3[性格タイプDB]\n        DB4[アドバイスDB]\n    end\n\n    subgraph ExternalServices\n        EXT1[SNS連携サービス]\n        EXT2[メール配信サービス]\n        EXT3[データバックアップサービス]\n    end\n\n    UI1 --> API1\n    UI1 --> API2\n    UI1 --> API3\n    UI1 --> API4\n    UI2 --> API4\n    UI2 --> API5\n\n    API1 --> DB2\n    API1 --> DB3\n    API2 --> DB3\n    API2 --> DB4\n    API3 --> DB1\n    API4 --> DB1\n    API5 --> DB2\n\n    API1 --> EXT1\n    API3 --> EXT2\n    API4 --> EXT3\n    DB1 --> EXT3\n    DB2 --> EXT3"
+  }
+}
